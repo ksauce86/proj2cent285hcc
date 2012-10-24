@@ -14,8 +14,5 @@ Proj1::Application.routes.draw do
   match "workers/logout" => "workers#logout"
   match "workshops/summary" => "workshops#summary"
   match "workshops/show_participants" => "workshops#show_participants"
-<<<<<<< HEAD
   match "workers/create" => "workers#create"
-=======
->>>>>>> 48db01458cb9a24ffef0d3f7b11440a4c6eebd3a
 end

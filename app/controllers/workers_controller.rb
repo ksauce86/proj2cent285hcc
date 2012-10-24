@@ -9,7 +9,6 @@ class WorkersController < ApplicationController
     end
     # new lines ends
   end
-<<<<<<< HEAD
   def create
    require "digest/md5"
    pass = Digest::MD5.hexdigest(params[:password])
@@ -18,8 +17,6 @@ class WorkersController < ApplicationController
      :password => pass,
      :department => params[:department])
    end
-=======
->>>>>>> 48db01458cb9a24ffef0d3f7b11440a4c6eebd3a
   def login
     if params[:username] == nil
       username = password = ""
