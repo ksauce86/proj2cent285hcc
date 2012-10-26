@@ -17,6 +17,19 @@ class WorkersController < ApplicationController
      :password => pass,
      :department => params[:department])
    end
+  def edit
+   require "digest/md5"
+   pass = Digest::MD5.hexdigest(params[:password])
+   worker = Worker.find_by_username(params[:username])
+   worker.update_attributes(:name => params[:name],
+     :username => params[:username],
+     :password => pass,
+     :department => params[:department])
+  end
+  def destroy
+   worker = Worker.find_by_username(params{:username])
+   Worker.destroy(worker);
+  end
   def login
     if params[:username] == nil
       username = password = ""

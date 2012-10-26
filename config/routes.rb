@@ -15,4 +15,5 @@ Proj1::Application.routes.draw do
   match "workshops/summary" => "workshops#summary"
   match "workshops/show_participants" => "workshops#show_participants"
   match "workers/create" => "workers#create"
+  match "workers/edit" => "workers#edit"
 end
