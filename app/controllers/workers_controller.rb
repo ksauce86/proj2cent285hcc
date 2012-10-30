@@ -27,7 +27,7 @@ class WorkersController < ApplicationController
      :department => params[:department])
   end
   def destroy
-   worker = Worker.find_by_username(params{:username])
+   worker = Worker.find_by_id(params[:id].to_i)
    Worker.destroy(worker);
   end
   def login
@@ -54,3 +54,4 @@ class WorkersController < ApplicationController
     redirect_to :controller => "workshops", :action => "summary"
   end
 end
+
